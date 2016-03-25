@@ -6,6 +6,7 @@
   "description": "Less than happy to serve",
   "dependencies": {
     "hubot": "^2.18.0",
+    "hubot-darksky": "^1.0.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-discord": "^1.0.2-beta.0",
     "hubot-factoids": "^0.2.7",
