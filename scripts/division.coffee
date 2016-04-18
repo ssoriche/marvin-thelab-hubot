@@ -22,4 +22,4 @@ module.exports = (robot) ->
          if weaponFound == ""
            msg.send "Weapon not found."
          else
-           msg.send "```" + weaponFound.name + "\n" + "\nRPM .............. " + weaponFound.rateOfFire + weaponFound.type + "\nAccuracy ......... " + weaponFound.accuracy + "\nStability ........ " + weaponFound.stability + "\nOptimal Range .... " + weaponFound.optimalRange + "\nReload Speed ..... " + weaponFound.reloadTime + "```"
+           msg.send "\n***" + weaponFound.name + "***\n" + weaponFound.type + "\nAccuracy ......... " + weaponFound.accuracy + "\nStability ........ " + weaponFound.stability + "\nOptimal Range .... " + weaponFound.optimalRange + "\nReload Speed ..... " + weaponFound.reloadTime
