@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#  hubot space - Get a random picture of space.
+#  .spod - returns the NASA APOD
 #
 # Notes:
 #  None
@@ -22,4 +22,4 @@ module.exports = (robot) ->
     url = "http://apod.nasa.gov/apod/astropix.html"
     msg.http(url).get() (err, resp, body) ->
       $ = cheerio.load(body)
-      msg.send "http://apod.nasa.gov/apod/" + $('img').attr('src')
+      msg.send "http://apod.nasa.gov/apod/" + $('img').attr('src') + ""
