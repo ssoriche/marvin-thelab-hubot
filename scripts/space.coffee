@@ -1,25 +1,19 @@
 # Description:
-#  Look at outer space
+#  NASA - Astronomy Picture of the Day
 #
 # Dependencies:
 # "cheerio": "0.19.0"
 #
-# Configuration:
-#   None
-#
 # Commands:
-#  .spod - returns the NASA APOD
-#
-# Notes:
-#  None
+#  .apod - returns the NASA APOD
 #
 # Author:
 #  @katagatame_
 cheerio = require("cheerio")
 
 module.exports = (robot) ->
-  robot.hear /.spod/i, (msg) ->
+  robot.hear /.apod/i, (msg) ->
     url = "http://apod.nasa.gov/apod/astropix.html"
     msg.http(url).get() (err, resp, body) ->
       $ = cheerio.load(body)
-      msg.send "http://apod.nasa.gov/apod/" + $('img').attr('src') + "\n"
+      msg.send "http://apod.nasa.gov/apod/" + $('img').attr('src')
