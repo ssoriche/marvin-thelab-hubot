@@ -17,6 +17,11 @@ module.exports = (robot) ->
     url = "http://apod.nasa.gov/apod/astropix.html"
     msg.http(url).get() (err, resp, body) ->
       $ = cheerio.load(body)
+      
+      img = "http://apod.nasa.gov/apod/" + $('img').attr('src')
       desc = $('center + center + p').text().trim().replace(/(\r\n|\n|\r)/gm,"").replace(/(\s)+/g," ").replace(/(Explanation:)/,"**Explanation:**")
-      msg.send "http://apod.nasa.gov/apod/" + $('img').attr('src')
-      msg.send desc
+
+      msg.send img
+      setTimeout -> 
+        msg.send desc
+      , 100
