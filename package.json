@@ -20,7 +20,7 @@
     "hubot-redis-brain": "0.0.3",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
-    "hubot-cah": "^1.0.1",
+    "hubot-cah": "^0.1.0",
     "hubot-shipit": "^0.2.0"
   },
   "engines": {
