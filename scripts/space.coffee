@@ -18,4 +18,6 @@ module.exports = (robot) ->
       $ = cheerio.load(body)
       desc = $('center + center + p').text()
       desc = desc.replace(/(\r\n|\n|\r)/gm,"").trim()
-      msg.reply "http://apod.nasa.gov/apod/" + $('img').attr('src') + "```" + desc + "```"
+      desc = "```" + desc + "```"
+      msg.reply "http://apod.nasa.gov/apod/" + $('img').attr('src')
+      msg.reply desc
