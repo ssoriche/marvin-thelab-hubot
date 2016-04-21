@@ -1,14 +1,17 @@
 # Description
-#   hubot scripts for the division
+#   General purpose script for the division
 #
 # Commands:
-#   hubot ping - Reply with pong
+#   .weapon div <weapon> - returns infomation about the specified weapon
+#   .weapons div <weapon> - returns infomation about the specified weapon
+#   !weapon div <weapon> - returns infomation about the specified weapon
+#   !weapons div <weapon> - returns infomation about the specified weapon
 #
 # Author:
-#   Nathan Ray <nathan@kaizotrap.com>
+#   @katagatame_ <nathan@kaizotrap.com>
 
 module.exports = (robot) ->
-   robot.hear /[\.!]weapons? div (.*)/i, (msg) ->
+   robot.hear /^[\.!]weapons? div (.*)/i, (msg) ->
      weaponName = msg.match[1]
      robot.http("https://thedivision.kaizotrap.com/weapons.min.json")
        .header('Accept', 'application/json')
