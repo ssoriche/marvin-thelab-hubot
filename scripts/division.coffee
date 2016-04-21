@@ -8,7 +8,7 @@
 #   Nathan Ray <nathan@kaizotrap.com>
 
 module.exports = (robot) ->
-   robot.hear /.weapon div (.*)/i, (msg) ->
+   robot.hear /[\.!]weapons? div (.*)/i, (msg) ->
      weaponName = msg.match[1]
      robot.http("https://thedivision.kaizotrap.com/weapons.min.json")
        .header('Accept', 'application/json')
