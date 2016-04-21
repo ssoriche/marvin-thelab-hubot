@@ -6,14 +6,15 @@
 #
 # Command:
 #  .apod - returns the NASA APOD and description
+#  !apod - returns the NASA APOD and description
 #
 # Author:
-#  @katagatame_
+#   @katagatame_ <nathan@kaizotrap.com>
 
 cheerio = require("cheerio")
 
 module.exports = (robot) ->
-  robot.hear /^.apod/i, (msg) ->
+  robot.hear /^[\.!]apod/i, (msg) ->
     url = "http://apod.nasa.gov/apod/astropix.html"
     msg.http(url).get() (err, resp, body) ->
       $ = cheerio.load(body)

@@ -10,7 +10,6 @@
     "hubot-darksky": "^1.0.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-discord": "^1.0.2-beta.0",
-    "hubot-factoids": "^0.2.7",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.3",
