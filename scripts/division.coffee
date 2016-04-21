@@ -16,7 +16,7 @@ module.exports = (robot) ->
          weapons = JSON.parse body
          weaponFound = ""
          for weapon in weapons
-           if weapon.name == weaponName
+           if weapon.name.match ///#{weaponName}///i
              weaponFound = weapon
 
          if weaponFound == ""
