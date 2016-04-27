@@ -27,7 +27,7 @@ module.exports = (robot) ->
       battleTag = msg.match[1].replace /#/, "%23"
       
       # Add battleTag
-      robot.brain.set 'msg.message.user.name.toLowerCase()', battleTag
+      robot.brain.set nick.toLowerCase(), battleTag
       
       # Confirmation message
       msg.send msg.match[1] + " linked to " + nick
@@ -37,7 +37,7 @@ module.exports = (robot) ->
   # .d3 chars
   robot.hear /^[\.!]D3 chars/i, (msg) ->
     # Check for nick
-    battleTag = robot.brain.get('msg.message.user.name.toLowerCase()')
+    battleTag = robot.brain.get(msg.message.user.name.toLowerCase())
 
     uppercase = (str) ->
       a1 = str.split(" ")
