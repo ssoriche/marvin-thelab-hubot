@@ -9,6 +9,7 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
+  "hubot-darksky",
   "hubot-cah",
-  "hubot-darksky"
+  "jobot-brain-file"
 ]
